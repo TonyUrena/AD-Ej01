@@ -16,7 +16,7 @@ public class Main {
             fileList.forEach((p) -> {
                 try {
                     if (Files.isRegularFile(p)){
-                        Files.move(p, Path.of(archivo.toAbsolutePath() + "/" + p.getFileName()));
+                        Files.move(p, Path.of(archivo + "/" + p.getFileName()));
                     } else {
                         Files.delete(p);
                     }
